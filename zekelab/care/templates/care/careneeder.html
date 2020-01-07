@@ -1,0 +1,37 @@
+{% extends 'care/basic.html' %}
+{% block title%}Care nedder{% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="container">
+<form method="post" action="/care/careneeder/"> {% csrf_token %}
+  <div class="form-group">
+    <label for="inputFullname">Full Name</label>
+    <input type="text" name="name" class="form-control" id="inputFullname" placeholder="Ankul Gautam">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+    <div class="form-group">
+    <label for="phone">Phone no:</label>
+    <input type="tel"  name="phone" class="form-control" id="phone" placeholder="+916390454---">
+  </div>
+    <div class="form-group">
+    <label for="DOB">Date of Birth</label>
+    <input type="date" name="dob" class="form-control" id="DOB" placeholder="07/12/0000">
+  </div>
+  <div class="form-group">
+    <label for="Milestone">Payee</label>
+    <input type="number" name="payee" class="form-control" id="Milestone">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">My Requirment</label>
+    <textarea name="require" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+{% endblock %}
+{% block js %} {% endblock %}

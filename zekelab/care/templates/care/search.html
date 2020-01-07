@@ -1,0 +1,25 @@
+{% extends 'care/basic.html' %}
+
+{% block title%}search{% endblock %}
+{% block body %}
+{% for care in care_num %}
+<div class="card w-100">
+  <div class="card-body">
+    <h5 class="card-title">{{care.name}} </h5>
+      <p class="card-rating"><b> Review:</b> <i>{{care.review}}</i></i></p>
+      <p class="card-rating"><b>Rating: {{care.rating}}/10</b></p>
+      <p class="card-details"><b>Details:</b> {{care.phone}}   ,    {{care.email}}</p>
+      <p class="card-text"><b>Milestone:</b> {{care.milestone}}</p>
+      <p class="card-text">{{care.message}}</p>
+    <a onclick="myFunction()" href="/care/search/" type="submit" class="btn btn-primary">Gives Responsiability</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+{% block js %}
+<script>
+function myFunction() {
+  window.alert("Hello Dear!! your request are send......");
+}
+</script>
+{% endblock %}
